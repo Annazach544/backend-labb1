@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lägg till kurs</title>
+</head>
+<body>
+
+    <h1>Lägg till kurs</h1>
+
+    <% if(errors.length > 0) { %>
+
+        <ul>
+            <% errors.forEach(error => { %>
+                <li><%= error %></li>
+            <% }) %>
+        </ul>
+
+    <% } %>
+
+    <form method="POST" action="/add">
+
+        <label for="coursecode">Kurskod:</label><br>
+        <input type="text" id="coursecode" name="coursecode"><br><br>
+
+        <label for="coursename">Kursnamn:</label><br>
+        <input type="text" id="coursename" name="coursename"><br><br>
+
+        <label for="syllabus">Kursplan:</label><br>
+        <input type="text" id="syllabus" name="syllabus"><br><br>
+
+        <label for="progression">Progression:</label><br>
+        <input type="text" id="progression" name="progression"><br><br>
+
+        <input type="submit" value="Spara kurs">
+
+    </form>
+
+    <p>
+        <a href="/">Tillbaka till startsidan</a>
+    </p>
+
+</body>
+</html>
