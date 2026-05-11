@@ -4,42 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lägg till kurs</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 
+<header>
+    <nav>
+        <a href="/">Mina kurser</a>
+        <a href="/add">Lägg till kurs</a>
+        <a href="/about">Om webbplatsen</a>
+    </nav>
+</header>
+
+<main>
     <h1>Lägg till kurs</h1>
+    <p class="intro">Fyll i formuläret för att spara en ny kurs i databasen.</p>
 
     <% if(errors.length > 0) { %>
-
-        <ul>
+        <ul class="error-list">
             <% errors.forEach(error => { %>
                 <li><%= error %></li>
             <% }) %>
         </ul>
-
     <% } %>
 
     <form method="POST" action="/add">
+        <label for="coursecode">Kurskod:</label>
+        <input type="text" id="coursecode" name="coursecode">
 
-        <label for="coursecode">Kurskod:</label><br>
-        <input type="text" id="coursecode" name="coursecode"><br><br>
+        <label for="coursename">Kursnamn:</label>
+        <input type="text" id="coursename" name="coursename">
 
-        <label for="coursename">Kursnamn:</label><br>
-        <input type="text" id="coursename" name="coursename"><br><br>
+        <label for="syllabus">Kursplan:</label>
+        <input type="text" id="syllabus" name="syllabus">
 
-        <label for="syllabus">Kursplan:</label><br>
-        <input type="text" id="syllabus" name="syllabus"><br><br>
-
-        <label for="progression">Progression:</label><br>
-        <input type="text" id="progression" name="progression"><br><br>
+        <label for="progression">Progression:</label>
+        <input type="text" id="progression" name="progression">
 
         <input type="submit" value="Spara kurs">
-
     </form>
+</main>
 
-    <p>
-        <a href="/">Tillbaka till startsidan</a>
-    </p>
+<footer>
+    <p>Laboration 1 - Serverbaserad webbutveckling</p>
+</footer>
 
 </body>
 </html>
