@@ -4,7 +4,7 @@ const sqlite3 = require("sqlite3").verbose();
 
 // Skapa Express-applikation
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 // Anslut till SQLite-databasen
 const db = new sqlite3.Database("./database/cv.db");
