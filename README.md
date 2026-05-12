@@ -16,6 +16,7 @@ Detta projekt är skapat som en laboration i serverbaserad webbutveckling.
 - EJS
 - SQLite
 - CSS
+  
 
 ## Starta projektet
 
@@ -23,3 +24,6 @@ Detta projekt är skapat som en laboration i serverbaserad webbutveckling.
 npm install
 node database/install.js
 node server.js
+
+## Publicerad version
+https://backend-labb1-hlgl.onrender.com
